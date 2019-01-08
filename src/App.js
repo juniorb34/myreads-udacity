@@ -14,15 +14,15 @@ class BooksApp extends Component {
     this.fetch_books_details();
   }
 
-  fetch_books_details = () => {
+  detailsBooks = () => {
     BooksAPI.getAll().then(books => {
       this.setState({ Books: books });
     });
   };
 
-  update_books_details = (book, shelf) => {
+  booksUpdates = (book, shelf) => {
     BooksAPI.update(book, shelf).then(() => {
-      this.fetch_books_details();
+      this.detailsBooks();
     });
   };
 
@@ -33,10 +33,7 @@ class BooksApp extends Component {
           exact
           path="/"
           render={() => (
-            <ListBook
-              books={this.state.Books}
-              onChange={this.update_books_details}
-            />
+            <ListBook books={this.state.Books} onChange={this.booksUpdates} />
           )}
         />
         <Route
@@ -44,7 +41,7 @@ class BooksApp extends Component {
           path="/search"
           render={({ history }) => (
             <BookSearch
-              onChange={this.update_books_details}
+              onChange={this.booksUpdates}
               myBooks={this.state.Books}
             />
           )}
