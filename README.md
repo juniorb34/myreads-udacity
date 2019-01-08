@@ -1,11 +1,25 @@
-## Descrição
+# myreads-udacity
 
-Este é um aplicativo de leitura onde você terá um controle do que está lendo, que quer ler e dos livros já lidos. E você pode adicionar novos livros através de uma pesquisa.
+This project helps you to manage your book habits.
 
-## Instalação
+Main features:
 
-npm install ou npm i
+- Catalog books into different phases of your reading process:
+  - Currently reading
+  - Want to read
+  - Read
+- Add more books to these main categories, adding a search feature
 
-## Rodar o projeto
+Instructions:
 
+- Install all project dependencies:
+
+```
+npm install
+```
+
+- Run projecty in development environment
+
+```
 npm start
+```
