@@ -11,7 +11,7 @@ class BooksApp extends Component {
   };
 
   componentDidMount() {
-    this.fetch_books_details();
+    this.detailsBooks();
   }
 
   detailsBooks = () => {
