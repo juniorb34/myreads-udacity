@@ -26,7 +26,7 @@ class BookSearch extends Component {
   changeBookShelf = books => {
     let all_Books = this.props.myBooks;
     for (let book of books) {
-      book.shelf = "none";
+      book.shelf = "None";
     }
 
     for (let book of books) {
