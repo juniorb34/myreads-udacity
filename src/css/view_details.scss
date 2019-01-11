@@ -1,0 +1,26 @@
+.details {
+  color: black;
+
+  blockquote {
+    text-align: center;
+  }
+
+  div {
+    display: inline;
+  }
+
+  strong {
+    color: blue;
+  }
+}
+
+.cover-image {
+  float: center;
+  margin: 15px;
+  box-shadow: 0px 4px 16px 1px rgba(0, 0, 0, 0.52);
+  transition: 700ms;
+
+  &:hover {
+    box-shadow: none;
+  }
+}

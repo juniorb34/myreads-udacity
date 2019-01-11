@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { PropTypes } from "prop-types";
+import Details from "./view_details";
 
 class Book extends Component {
   static propTypes = {
@@ -26,7 +27,10 @@ class Book extends Component {
               }}
             />
             <div className="book-shelf-changer">
-              <select onChange={this.change_bookShelf} value={book.shelf}>
+              <select
+                onChange={this.change_bookShelf}
+                value={book.shelf ? book.shelf : "none"}
+              >
                 <option value="none" disabled>
                   Move to...
                 </option>
@@ -40,6 +44,7 @@ class Book extends Component {
           <div className="book-title">{book.title}</div>
           <div className="book-authors">{book.authors}</div>
         </div>
+        <Details book={book} />
       </li>
     );
   }
